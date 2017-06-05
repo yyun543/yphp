@@ -1,0 +1,105 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family:'Microsoft YaHei',SimHei,Tahoma,Verdana,STHeiTi,simsun,sans-serif;
+}
+#m-header{
+	width: 100%;
+	height: 60px;
+	background-color: #0C1206;
+	color: #fff;
+	position: fixed;
+	top: 0;
+}
+.mt-center{
+	width: 93%;
+	height: 60px;
+	margin: 0 auto;
+}
+.logo{
+	display: inline-block;
+	width: 100px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	float: left;
+	margin-left: 30px;
+}
+.m-nav{
+	float: right;
+	margin-right: 30px;
+}
+.m-nav li{
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+.m-nav li a{
+	color: #fff;
+	letter-spacing:2px;
+	display: block;
+	transition: all .5s linear 0s;
+}
+.m-nav li a:hover{
+	background-color: #e2e2e2;
+	color: #000;
+	font-weight: bold;
+}
+.m-bg{
+	background: url('../img/m-bg.jpg') no-repeat fixed bottom center;
+	background-size: cover;
+}
+.continer{
+	width: 100%;
+	height: 960px;
+	background-color: #000;
+	opacity: 0.6;
+	margin: 60px auto 0 auto;
+	position: fixed;
+	color: #fff;
+	text-align: center;
+}
+.c-top{
+	margin: 150px auto 0 auto;
+}
+.c-top h2{
+	font-size: 60px;
+	letter-spacing:5px;
+}
+.c-top p{
+	font-size: 30px;
+	letter-spacing:3px;
+}
+.c-buttom{
+	margin: 50px auto 0 auto;
+}
+.c-btn{
+	width: 170px;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 auto;
+	border: 1px solid #fff;
+	font-size:25px;
+	cursor: pointer;
+	letter-spacing:3px;
+	transition: all .2s linear 0s;
+}
+.c-btn:hover{
+	border-radius: 35px;
+	font-weight: bold;
+	box-shadow:2px 3px 3px #fff; 
+}
+.c-btn a{
+	color: #fff;
+	display: block;
+}

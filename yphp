@@ -1,0 +1,10 @@
+<?php
+
+define('DEBUG', true);//调试模式
+
+define('ROOT_DIR', realpath(__DIR__));    // 根目录
+//系统路径
+define('CORE', ROOT_DIR . '/core/');
+define('MODULE', 'app');
+//载入composer自动加载器
+require_once ROOT_DIR . '/vendor/autoload.php';
