@@ -6,7 +6,7 @@ return array(
 	'database_name' => 'demo',
 	'server' => '127.0.0.1',
 	'username' => 'root',
-	'password' => 'root',
+	'password' => '',
 	'charset' => 'utf8',
 	//medoo 对表前缀的支持有BUG,所以暂时不推荐设置表前缀
 	'prefix' => '',
