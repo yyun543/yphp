@@ -11,7 +11,7 @@ class conf
      *
      * @var array
      */
-    public static $conf = array();
+    public static $conf = [];
     
     /**
      * 加载系统配置,如果之前已经加载过,那么就直接返回

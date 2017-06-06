@@ -13,7 +13,7 @@ defined('DS') or define('DS', DIRECTORY_SEPARATOR);
 //系统路径
 defined('CORE') or define('CORE', ROOT_DIR .DS.'core'.DS);
 // 框架核心类库目录
-defined('YPHP_DIR') or define('YPHP_DIR',CORE.DS.'yphp'.DS);
+defined('YPHP_DIR') or define('YPHP_DIR',CORE.'yphp'.DS);
 // 模块目录
 defined('MODULE') or define('MODULE', 'app');
 // 应用目录

@@ -19,10 +19,6 @@
         "files": [
             "core/init.php"
         ],
-        "psr-4": {
-            "core\\": "core/",
-            "app\\": "app/"
-        },
         "classmap": ["common/"]
   },
   "authors": [
