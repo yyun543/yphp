@@ -10,6 +10,7 @@ class yphp_cli extends yphp
     {
         //加载日志模块
         \yphp\log::init();
+        // 接收命令行参数
         $argv = $_SERVER['argv'];
         unset($argv[0]);
         $shellName = array_shift($argv);
@@ -19,10 +20,11 @@ class yphp_cli extends yphp
         $shellFile = "common\\shell\\{$shellName}";
         try {
             $f_name = str_replace('\\', DS, trim(ROOT_DIR.DS.$shellFile.'.php', '\\'));
+            // 引入对应命令脚本
             if(file_exists($f_name)) {
                 require_once $f_name;
+                // 实例化并调用对应脚本处理方法
                 $shell = new $shellFile($argv);
-                
                 $shell->start();
             } else {
                 throw New Exception('不存在的脚本');
