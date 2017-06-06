@@ -4,7 +4,7 @@ session_start();
  * 框架加载文件，用于引导框架启动
  * ======================================================================== */
 define('TIME', $_SERVER['REQUEST_TIME']);
-define('YPHP_VERSION','1.5.9');
+define('YPHP_VERSION','1.6.1');
 // 调试模式
 defined('DEBUG') or define('DEBUG', true);
 // 根目录
