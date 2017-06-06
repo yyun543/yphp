@@ -30,6 +30,8 @@ class indexController extends \yphp
     */
     public function hello(){
         P('Hello YPHP!');
+        \yphp\session::set('name','Hello BugLi');
+        P(\yphp\session::get('name'));
     }
 
     /*

@@ -1,5 +1,4 @@
 <?php
-session_start();
 /* ========================================================================
  * 框架加载文件，用于引导框架启动
  * ======================================================================== */
@@ -34,14 +33,14 @@ if(DEBUG && PHP_SAPI != 'cli') {
     ini_set('log_errors', 'On');
     ini_set('error_log', ROOT_DIR.DS.'runtime'.DS.'log'.DS.'error.log');
 }
-//加载类库
+//加载公用函数
 require_once CORE .'function/function.php';
 //加载框架内核
 require_once CORE . 'yphp.php';
 
 //注册自动加载
 spl_autoload_register('\yphp::load');
-//设置默认市区
+//设置默认时区
 date_default_timezone_set(\yphp\conf::get('TIMEZONE','system'));
 // 判断是否是命令行模式
 if(PHP_SAPI == 'cli') {

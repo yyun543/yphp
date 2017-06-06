@@ -44,7 +44,11 @@ class yphp
      */
     public static function run()
     {
+        //路由初始化
         $request = new \yphp\route();
+        //注册session
+        \yphp\session::register();
+        //注册日志处理模块
         \yphp\log::init();
         $controllerClass = '\\' . MODULE . '\controllers\\' . $request->controller . 'Controller';
         $action = $request->action;

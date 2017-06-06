@@ -7,8 +7,16 @@ namespace yphp;
 
 class session
 {
-
-	function set($sessionName,$value)
+	/*
+	 * 开启session
+	 */
+	public static function register(){
+		$start_flg = session_start();
+		if(!$start_flg){
+			throw new Exception('SESSION开启失败，请检查是否已启用SESSION扩展！');
+		}
+	}
+	public static function set($sessionName,$value)
 	{
 		return $_SESSION[$sessionName] = $value;
 	}
@@ -18,7 +26,7 @@ class session
 	 * @param string $sessionName
 	 * @return string session的值如果没有此session，返回空。
 	 */
-	function get($sessionName)
+	public static function get($sessionName)
 	{
 		return isset($_SESSION[$sessionName]) ? $_SESSION[$sessionName] : '';
 	}
@@ -27,7 +35,7 @@ class session
 	 * 删除一个session
 	 * @param string $sessionName
 	 */
-	function del($sessionName)
+	public static function del($sessionName)
 	{
 		if(isset($sessionName))
 		{
@@ -37,7 +45,7 @@ class session
 		return False;
 	}
 
-	function clear()
+	public static function clear()
 	{
 		if(isset($_SESSION))
 		{

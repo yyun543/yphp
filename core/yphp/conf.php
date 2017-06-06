@@ -11,7 +11,7 @@ class conf
      *
      * @var array
      */
-    static public $conf = array();
+    public static $conf = array();
     
     /**
      * 加载系统配置,如果之前已经加载过,那么就直接返回
@@ -19,7 +19,7 @@ class conf
      * @param string $file 文件名
      * @return mix
      */
-    static public function get($name,$file='conf')
+    public static function get($name,$file='conf')
     {
         if(isset(self::$conf[$file][$name])) {
             return self::$conf[$file][$name];
@@ -41,7 +41,7 @@ class conf
      * @param string $file 文件名
      * @return mix
      */
-    static public function all($file)
+    public static function all($file)
     {
         if(isset(self::$conf[$file])) {
             return self::$conf[$file];
