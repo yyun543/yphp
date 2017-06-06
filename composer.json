@@ -1,5 +1,5 @@
 {
-  "name": "yyun543/YPHP",
+  "name": "yyun543/yphp",
   "type": "framework",
   "description": "YPHP Framework",
   "keywords": [
@@ -16,9 +16,14 @@
     "symfony/var-dumper": "^3.2"
   },
   "autoload": {
-    "files": [
-      "core/init.php"],
-    "classmap": ["common/"]
+        "files": [
+            "core/init.php"
+        ],
+        "psr-4": {
+            "core\\": "core/",
+            "app\\": "app/"
+        },
+        "classmap": ["common/"]
   },
   "authors": [
     {
