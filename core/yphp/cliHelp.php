@@ -25,8 +25,8 @@ class ".$file."Controller extends \\yphp
     {
         return "<?php
 namespace ".MODULE."\\models;
-use yphp\model;
 
+use yphp\model;
 class ".$file."Model
 {
     public function index()
