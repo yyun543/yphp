@@ -29,29 +29,19 @@ class indexController extends \yphp
     * hello方法
     */
     public function hello(){
-        P('Hello YPHP!');
-        \yphp\session::set('name','Hello BugLi');
-        P(\yphp\session::get('name'));
+        // 测试redis
+        $conf = [
+            'host'     => '127.0.0.1',
+            'port'     => 6379,
+            'password' => '',
+            'database' => 2,
+        ];
+        $redis = new \yphp\lib\Redis\Redis;
+        $redis->config($conf);
+        $redis->hSet('user', '1', 'bugli');
+        var_dump($redis->hGetAll('user'));
     }
 
-    /*
-    *测试依赖注入
-     */
-    public function didemo(){
-/*        
-        TODO
-        // 获得容器
-        $app = new \yphp\lib\DI\Container();
-        // 向容器中绑定组件
-        $app->bind('a', '\app\controllers\A');
-        $app->bind('b', '\app\controllers\B');
-        $app->bind('c', '\app\controllers\C');
-        // 单例绑定
-        // $app->bindSingle('sa', '\app\controllers\A');
-        // 从容器中取出对象
-        $b = $app->make('b');
-        $b->say();*/
-    }
 
 }
 
