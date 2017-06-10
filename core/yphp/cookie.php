@@ -63,7 +63,7 @@ class cookie
         if ($name != '' && $value != '') {
             $value = self::encryption($value);
             $expire = time() + $expire;
-            return setcookie($name, $value, $expire, $path, $domain, $secure);
+            return setcookie($name, $value, $expire, $path, $domain, $secure,true);
         } else {
             return false;
         }
