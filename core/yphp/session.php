@@ -12,6 +12,7 @@ class session
 	 */
 	public static function register(){
 		$start_flg = session_start();
+		ini_set("session.cookie_httponly", true);
 		if(!$start_flg){
 			throw new Exception('SESSION开启失败，请检查是否已启用SESSION扩展！');
 		}
