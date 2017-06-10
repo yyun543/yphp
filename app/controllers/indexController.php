@@ -42,6 +42,11 @@ class indexController extends \yphp
         var_dump($redis->hGetAll('user'));
     }
 
+    public function stest(){
+        \yphp\session::set('name','bugli_666');
+        P(\yphp\session::get('name'));
+    }
+
 
 }
 
