@@ -60,6 +60,9 @@ class route
             $this->controller = conf::get('DEFAULT_CONTROLLER', 'route');
             $this->action = conf::get('DEFAULT_ACTION', 'route');
         }
+        // 设置当前控制器、方法名常量
+        define('CONTROLLER',$this->controller);
+        define('ACTION',$this->action);
     }
 
     public function urlVar($num, $default = false)
